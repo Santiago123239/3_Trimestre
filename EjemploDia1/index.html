@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let a = [1, 2, 4, 56, 7];
+
+    for (let i = 0; i < a.length; i++) {
+      console.log(a[i] + 10);
+    }
+    console.log(a);
+
+
+
+    let b=["Bilbo","Gandia","Nazgul"];
+
+    console.log(b);
+    b.forEach(alert)//Ejecuta por cada elemento un alert
+
+    let elemento;
+
+    let c=[1,2,3,4,5,6,7,8,9,10];
+    console.log(c);
+
+    //c.forEach(elemento => console.log(elemeto+10)); no funciona
+
+    c.forEach(
+        function(item, index, array){
+            console.log(item+10);
+            //console.log(item, index)
+        }
+    );
+
+    c.forEach(
+        function(item, index){
+            console.log(`HE SUMADO 10 AL INDICE ${index} y es igual a ${item+10}`)
+            //console.log(item, index)
+        }
+    );
+
+    console.log("Con el array tambien");
+    c.forEach(
+        function(item, index){
+            console.log(`HE SUMADO 10 AL INDICE ${index} y es igual a ${item+10} al arrat ${c}`)
+            //console.log(item, index)
+        }
+    );
+
+    console.log("Usando la funcion Flecha");
+
+    c.forEach((item, index) => {
+            console.log(`HE SUMADO 10 AL INDICE ${index} y es igual a ${item+10}`)
+            //console.log(item, index)
+        }
+    );
+
+    console.log("Usando flecha con solo comentario");
+    a.forEach(item=>console.log(`He sumado 10 y es igual${item+10}`))
+
+//****************************************************************
+    //a.push(6,1,4);Para agregar elementos al final
+
+    // let longitud=a.length;
+
+    // let ulimoElemento=a[longitud-1];
+
+    // let ultimo=a.pop(); para extraer elementos del final
+
+    // console.log(a);
+
+    // console.log(ulimoElemento);
+  </script>
+</html>
